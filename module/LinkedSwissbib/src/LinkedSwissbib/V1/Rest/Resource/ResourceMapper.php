@@ -14,12 +14,36 @@ class ResourceMapper
 
     public function fetchAll($params)
     {
+        $qPar = $params->get('q');
 
+        $queryAll = $params->count() > 0 && !empty($qPar) ? $qPar : null;
         $client = new Client();
         $getParams = array();
         $getParams['index'] = 'swissbib';
         $getParams['type'] = 'RDF';
-        $getParams['body']['query']['match']['title'] = 'katalog';
+
+        if ($queryAll) {
+            $getParams['body'] = array(
+                "query" => array(
+                    //"match_all" => $queryAll != null ? [$queryAll] : []
+                    "multi_match" => array(
+                        'query' => $queryAll,
+                        'fields' => array(
+                            'title', 'bibliographicCitation','isssued', 'format', 'publicationStatement'
+                        )
+                    )
+                ));
+        } else {
+            $getParams['body'] = array(
+            "query" => array(
+                'match_all' => [])
+            );
+        }
+
+
+
+
+
         $documents =  $client->search($getParams);
 
         $adapter = new SearchResultAdapter(new SearchResultCollection($documents));
