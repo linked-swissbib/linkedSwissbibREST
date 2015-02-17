@@ -1,0 +1,59 @@
+
+After I included elasticsearch client I git the following additional libs with php composer.phar update
+
+no changes added to commit (use "git add" and/or "git commit -a")
+swissbib@ub-sbhp02:/usr/local/vufind/linkedSwissbibREST$ php composer.phar update
+Loading composer repositories with package information
+Updating dependencies (including require-dev)
+  - Installing psr/log (1.0.0)
+    Loading from cache
+
+  - Installing symfony/event-dispatcher (v2.6.4)
+    Loading from cache
+
+  - Installing guzzle/common (v3.9.2)
+    Loading from cache
+
+  - Installing guzzle/stream (v3.9.2)
+    Loading from cache
+
+  - Installing guzzle/parser (v3.9.2)
+    Loading from cache
+
+  - Installing guzzle/http (v3.9.2)
+    Loading from cache
+
+  - Installing pimple/pimple (v2.1.1)
+    Loading from cache
+
+  - Installing monolog/monolog (1.12.0)
+    Loading from cache
+
+  - Installing elasticsearch/elasticsearch (v1.3.2)
+    Loading from cache
+
+  - Installing kevinlebrun/colors.php (0.2.0)
+    Loading from cache
+
+  - Installing nategood/commando (0.2.1)
+    Loading from cache
+
+  - Installing zeptech/annotations (1.1.0)
+    Loading from cache
+
+  - Installing athletic/athletic (v0.1.8)
+    Loading from cache
+
+symfony/event-dispatcher suggests installing symfony/dependency-injection ()
+symfony/event-dispatcher suggests installing symfony/http-kernel ()
+monolog/monolog suggests installing graylog2/gelf-php (Allow sending log messages to a GrayLog2 server)
+monolog/monolog suggests installing raven/raven (Allow sending log messages to a Sentry server)
+monolog/monolog suggests installing doctrine/couchdb (Allow sending log messages to a CouchDB server)
+monolog/monolog suggests installing ruflin/elastica (Allow sending log messages to an Elastic Search server)
+monolog/monolog suggests installing videlalvaro/php-amqplib (Allow sending log messages to an AMQP server using php-amqplib)
+monolog/monolog suggests installing ext-amqp (Allow sending log messages to an AMQP server (1.0+ required))
+monolog/monolog suggests installing ext-mongo (Allow sending log messages to a MongoDB server)
+monolog/monolog suggests installing aws/aws-sdk-php (Allow sending log messages to AWS services like DynamoDB)
+monolog/monolog suggests installing rollbar/rollbar (Allow sending log messages to Rollbar)
+Writing lock file
+Generating autoload files
