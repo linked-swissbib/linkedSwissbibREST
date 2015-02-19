@@ -33,7 +33,8 @@ class SearchResultCollection implements  SearchResultCollectionInterface
      */
     public function current()
     {
-        return $this->esResult['hits']['hits'][$this->position];
+        //return $this->esResult['hits']['hits'][$this->position];
+        return $this->esResult[$this->position];
     }
 
     /**
@@ -83,15 +84,19 @@ class SearchResultCollection implements  SearchResultCollectionInterface
 
     public function count()
     {
-        return $this->esResult != null && count($this->esResult) > 0 && array_key_exists('hits', $this->esResult) ?
-            $this->esResult['hits']['total'] : 0;
+        //return $this->esResult != null && count($this->esResult) > 0 && array_key_exists('hits', $this->esResult) ?
+        //    $this->esResult['hits']['total'] : 0;
+        return $this->getFetchedCollectionSize();
     }
 
     protected function getFetchedCollectionSize()
     {
 
-        return $this->esResult != null && count($this->esResult) > 0 && array_key_exists('hits', $this->esResult)
-        && array_key_exists('hits', $this->esResult['hits']) ? count($this->esResult['hits']['hits']) : 0;
+        //return $this->esResult != null && count($this->esResult) > 0 && array_key_exists('hits', $this->esResult)
+        //&& array_key_exists('hits', $this->esResult['hits']) ? count($this->esResult['hits']['hits']) : 0;
+
+        return $this->esResult != null &&  is_array($this->esResult) ? count($this->esResult) : 0;
+
 
     }
 

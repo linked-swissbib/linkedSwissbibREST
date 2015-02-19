@@ -2,6 +2,7 @@
 namespace LinkedSwissbib\V1\Rest\Resource;
 
 use Elasticsearch\Client;
+use Zend\Stdlib\ArrayObject;
 
 
 class ResourceMapper
@@ -46,7 +47,13 @@ class ResourceMapper
 
         $documents =  $client->search($getParams);
 
-        $adapter = new SearchResultAdapter(new SearchResultCollection($documents));
+        $arrObj = new ArrayObject(array());
+        $resourceHydrator = new ResourceHydrator();
+        $resourceHydrator->hydrate($documents,$arrObj);
+
+        $entityArray = $arrObj->getArrayCopy();
+
+        $adapter = new SearchResultAdapter(new SearchResultCollection($entityArray));
         return  new ResourceCollection($adapter);
 
     }

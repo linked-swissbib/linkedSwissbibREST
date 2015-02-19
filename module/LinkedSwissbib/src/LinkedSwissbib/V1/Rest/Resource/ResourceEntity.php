@@ -13,6 +13,7 @@ class ResourceEntity
     protected $isbn13;
     protected $isbn10;
     protected $issn;
+    protected $id;
 
 
     public function getArrayCopy()
@@ -22,9 +23,12 @@ class ResourceEntity
 
     public function populate($data)
     {
-        foreach ($data as $key => $value) {
-            $this->{$key} = $value;
+        foreach ($data['_source'] as $key => $value) {
+            if (property_exists($this,$key)) {
+                $this->{$key} = $value[0];
+            }
         }
+        $this->id = $data['_id'];
     }
 
 
