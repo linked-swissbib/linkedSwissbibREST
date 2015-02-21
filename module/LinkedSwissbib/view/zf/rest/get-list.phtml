@@ -1,0 +1,51 @@
+
+<div class="container">
+
+    <?php
+        $collecton = $this->payload->getCollection();
+    ?>
+    <?php foreach ($collecton as $key => $value): ?>
+
+    <h2><a href="<?= "https://test.swissbib.ch/Record/" . $value->getId()?>"  target="_blank    " ><?= $value->getId() ?></a></h2>
+		<ul class="nav nav-tabs" id="<?= "-" . $value->getId() . "-serializations" ?>">
+		  <li><a href="<?= "#-" . $value->getId() . "-rdfa" ?>" data-toggle="tab">RDFa</a></li>
+		  <li><a href="<?= "#-" . $value->getId() . "-jld" ?>" data-toggle="tab">JLD</a></li>
+		  <li><a href="<?= "#-" . $value->getId() . "-nt" ?>" data-toggle="tab">NT</a></li>
+		  <li><a href="<?= "#-" . $value->getId() . "-ttl" ?>" data-toggle="tab">TTL</a></li>
+		</ul>
+
+        <div class="tab-content">
+            <div class="tab-pane active" id="<?= "-" . $value->getId() . "-rdfa" ?>">
+                in rdfa
+            </div>
+
+            <div class="tab-pane" id="<?= "-" . $value->getId() . "-jld" ?>">
+                in jld
+            </div>
+
+            <div class="tab-pane" id="<?= "-" . $value->getId() . "-nt" ?>">
+                in nt
+            </div>
+
+            <div class="tab-pane" id="<?= "-" . $value->getId() . "-ttl" ?>">
+                in ttl
+            </div>
+        </div>
+
+
+        <script language="JavaScript">
+
+            $(function() {
+                $(<?= "'#-" . $value->getId() . "-serializations  a:first'" ?>).tab('show');
+            });
+
+
+
+       </script>
+
+    <?php endforeach; ?>
+
+
+
+
+</div>

@@ -45,23 +45,54 @@ return array(
             'entity_class' => 'LinkedSwissbib\\V1\\Rest\\Resource\\ResourceEntity',
             'collection_class' => 'LinkedSwissbib\\V1\\Rest\\Resource\\ResourceCollection',
             'service_name' => 'Resource',
+            'controller_class'  => 'LinkedSwissbib\\V1\\Rest\\Controller\\ResourceController'
         ),
     ),
     'zf-content-negotiation' => array(
         'controllers' => array(
-            'LinkedSwissbib\\V1\\Rest\\Resource\\Controller' => 'HalJson',
+            //das geht so nicht mehr wenn ich verschiedene Typen bedienen möchte
+            //'LinkedSwissbib\\V1\\Rest\\Resource\\Controller' => 'HalJson',
+
+            'LinkedSwissbib\\V1\\Rest\\Resource\\Controller' => array(
+                //ich muss hier den Modelltyp komplett angeben
+                //ohne Array war HalJson ausreicheichend - warum?
+                //'HalJson' => array(
+                'ZF\Hal\View\HalJsonModel' => array(
+                    'application/json',
+                    'application/*+json',
+                ),
+                'ZF\ContentNegotiation\ViewModel' => array(
+                    'text/html'
+                )
+            )
+
+
         ),
         'accept_whitelist' => array(
             'LinkedSwissbib\\V1\\Rest\\Resource\\Controller' => array(
                 0 => 'application/vnd.linked-swissbib.v1+json',
                 1 => 'application/hal+json',
                 2 => 'application/json',
+                3   =>  'text/html'
+            ),
+        ),
+        'selectors' => array(
+
+            'HalJson' => array(
+                'ZF\ContentNegotiation\JsonModel' => array(
+                    'application/json',
+                    'application/*+json',
+                ),
+                'ZF\ContentNegotiation\ViewModel' => array(
+                    'text/html',
+                ),
             ),
         ),
         'content_type_whitelist' => array(
             'LinkedSwissbib\\V1\\Rest\\Resource\\Controller' => array(
                 0 => 'application/vnd.linked-swissbib.v1+json',
                 1 => 'application/json',
+                2   => 'text/html'
             ),
         ),
     ),
@@ -163,4 +194,15 @@ return array(
             ),
         ),
     ),
+    'view_manager' => array(
+        'template_map' => array(
+            'linked-swissbib/resource/get-list'    => __DIR__ . '/../view/zf/rest/get-list.phtml',
+            'layout/layoutAPI'           => __DIR__ . '/../view/zf/layout/layout-api.phtml',
+
+        ),
+        'template_path_stack' => array(
+            __DIR__ . '/../view',
+        ),
+    ),
+
 );
