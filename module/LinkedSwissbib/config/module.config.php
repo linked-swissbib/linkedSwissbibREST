@@ -208,4 +208,10 @@ return array(
             0 => __DIR__ . '/../view',
         ),
     ),
+    'view_helpers'    => array(
+        'invokables' => array(
+            'convertRDF'                        => 'LinkedSwissbib\V1\Rest\View\Helpers\ConvertRDF'
+        )
+    )
+
 );

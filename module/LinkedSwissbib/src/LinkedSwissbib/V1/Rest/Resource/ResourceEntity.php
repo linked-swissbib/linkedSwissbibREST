@@ -27,6 +27,27 @@ class ResourceEntity
         foreach ($data['_source'] as $key => $value) {
             if (property_exists($this,$key)) {
 
+                if ($key == 'fullRecord') {
+                    //$rdfGraph = new \EasyRdf_Graph('http://www.woz.ch', $value,'rdfxml');
+                    //$foaf = new \EasyRdf_Graph("http://njh.me/foaf.rdf");
+                    //$foaf->load();
+
+                    foreach (\EasyRdf_Format::getFormats() as $format) {
+                        $test = "";
+                    }
+
+                    $rdfGraph = new \EasyRdf_Graph();
+                    //\EasyRdf_Format::
+                    $result = $rdfGraph->parse($value,'rdfxml');
+                    $turtle = $rdfGraph->serialise('turtle');
+                    $ntriples = $rdfGraph->serialise('ntriples');
+                    $jsonld = $rdfGraph->serialise('jsonld');
+                    //$rdfa = $rdfGraph->serialise('rdfa');
+
+
+                }
+
+
                 $this->{$key} = is_array($value) ? $value[0] : $value;
             }
         }
