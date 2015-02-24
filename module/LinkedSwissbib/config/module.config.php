@@ -39,52 +39,48 @@ return array(
                 0 => 'GET',
                 1 => 'POST',
             ),
-            'collection_query_whitelist' => array('q','sort','from','format'),
+            'collection_query_whitelist' => array(
+                0 => 'q',
+                1 => 'sort',
+                2 => 'from',
+                3 => 'format',
+            ),
             'page_size' => '5',
             'page_size_param' => null,
             'entity_class' => 'LinkedSwissbib\\V1\\Rest\\Resource\\ResourceEntity',
             'collection_class' => 'LinkedSwissbib\\V1\\Rest\\Resource\\ResourceCollection',
             'service_name' => 'Resource',
-            'controller_class'  => 'LinkedSwissbib\\V1\\Rest\\Controller\\ResourceController'
+            'controller_class' => 'LinkedSwissbib\\V1\\Rest\\Controller\\ResourceController',
         ),
     ),
     'zf-content-negotiation' => array(
         'controllers' => array(
-            //das geht so nicht mehr wenn ich verschiedene Typen bedienen möchte
-            //'LinkedSwissbib\\V1\\Rest\\Resource\\Controller' => 'HalJson',
-
             'LinkedSwissbib\\V1\\Rest\\Resource\\Controller' => array(
-                //ich muss hier den Modelltyp komplett angeben
-                //ohne Array war HalJson ausreicheichend - warum?
-                //'HalJson' => array(
-                'ZF\Hal\View\HalJsonModel' => array(
-                    'application/json',
-                    'application/*+json',
+                'ZF\\Hal\\View\\HalJsonModel' => array(
+                    0 => 'application/json',
+                    1 => 'application/*+json',
                 ),
-                'ZF\ContentNegotiation\ViewModel' => array(
-                    'text/html'
-                )
-            )
-
-
+                'ZF\\ContentNegotiation\\ViewModel' => array(
+                    0 => 'text/html',
+                ),
+            ),
         ),
         'accept_whitelist' => array(
             'LinkedSwissbib\\V1\\Rest\\Resource\\Controller' => array(
                 0 => 'application/vnd.linked-swissbib.v1+json',
                 1 => 'application/hal+json',
                 2 => 'application/json',
-                3   =>  'text/html'
+                3 => 'text/html',
             ),
         ),
         'selectors' => array(
-
             'HalJson' => array(
-                'ZF\ContentNegotiation\JsonModel' => array(
-                    'application/json',
-                    'application/*+json',
+                'ZF\\ContentNegotiation\\JsonModel' => array(
+                    0 => 'application/json',
+                    1 => 'application/*+json',
                 ),
-                'ZF\ContentNegotiation\ViewModel' => array(
-                    'text/html',
+                'ZF\\ContentNegotiation\\ViewModel' => array(
+                    0 => 'text/html',
                 ),
             ),
         ),
@@ -92,7 +88,7 @@ return array(
             'LinkedSwissbib\\V1\\Rest\\Resource\\Controller' => array(
                 0 => 'application/vnd.linked-swissbib.v1+json',
                 1 => 'application/json',
-                2   => 'text/html'
+                2 => 'text/html',
             ),
         ),
     ),
@@ -191,18 +187,25 @@ return array(
                 'required' => false,
                 'filters' => array(),
                 'validators' => array(),
+                'allow_empty' => false,
+                'continue_if_empty' => false,
+            ),
+            9 => array(
+                'name' => 'fullRecord',
+                'required' => false,
+                'filters' => array(),
+                'validators' => array(),
+                'allow_empty' => true,
             ),
         ),
     ),
     'view_manager' => array(
         'template_map' => array(
-            'linked-swissbib/resource/get-list'    => __DIR__ . '/../view/zf/rest/get-list.phtml',
-            'layout/layoutAPI'           => __DIR__ . '/../view/zf/layout/layout-api.phtml',
-
+            'linked-swissbib/resource/get-list' => __DIR__ . '/../view/zf/rest/get-list.phtml',
+            'layout/layoutAPI' => __DIR__ . '/../view/zf/layout/layout-api.phtml',
         ),
         'template_path_stack' => array(
-            __DIR__ . '/../view',
+            0 => __DIR__ . '/../view',
         ),
     ),
-
 );

@@ -14,6 +14,7 @@ class ResourceEntity
     protected $isbn10;
     protected $issn;
     protected $id;
+    protected $fullRecord;
 
 
     public function getArrayCopy()
@@ -25,7 +26,8 @@ class ResourceEntity
     {
         foreach ($data['_source'] as $key => $value) {
             if (property_exists($this,$key)) {
-                $this->{$key} = $value[0];
+
+                $this->{$key} = is_array($value) ? $value[0] : $value;
             }
         }
         $this->id = $data['_id'];
@@ -191,6 +193,21 @@ class ResourceEntity
         $this->id = $id;
     }
 
+    /**
+     * @return mixed
+     */
+    public function getFullRecord()
+    {
+        return $this->fullRecord;
+    }
+
+    /**
+     * @param mixed $fullRecord
+     */
+    public function setFullRecord($fullRecord)
+    {
+        $this->fullRecord = $fullRecord;
+    }
 
 
 

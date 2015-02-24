@@ -1,0 +1,13 @@
+1) Hintergründe
+
+https://cw.fel.cvut.cz/wiki/_media/courses/osw/lecture-09linkeddata-s.pdf
+https://www.diigo.com/list/busa78/semantic-web
+
+
+
+2) Start von admin
+php -S 0.0.0.0:8888 -t public public/index.php
+
+
+3) Zugriff
+ curl --cookie "XDEBUG_SESSION=19101" -s -H "Accept: application/vnd.linked-swissbib.v1+json" http://localhost:37000/resource | python -mjson.tool
