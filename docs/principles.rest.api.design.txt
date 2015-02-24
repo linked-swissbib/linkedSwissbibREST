@@ -1,0 +1,17 @@
+
+
+
+
+
+verschiedene Artikel über API Design
+http://www.infoq.com/articles/Web-APIs-From-Start-to-Finish
+
+u.a. dieser
+http://www.infoq.com/articles/web-api-design-methodology
+
+
+Buchzusammenstellung (reading-list)
+http://www.infoq.com/articles/rest-reading-list
+
+-> speziell (auch Einführung in Json-LD)
+http://proquest.tech.safaribooksonline.de/book/web-development/9781449359713

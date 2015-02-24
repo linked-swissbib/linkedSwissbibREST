@@ -18,7 +18,7 @@ class ResourceMapper
         $qPar = $params->get('q');
 
         $queryAll = $params->count() > 0 && !empty($qPar) ? $qPar : null;
-        $client = new Client();
+        $client = new Client(['hosts' => ['sb-s1.swissbib.unibas.ch:8080']]);
         $getParams = array();
         $getParams['index'] = 'swissbib';
         $getParams['type'] = 'RDF';
