@@ -18,11 +18,11 @@ class ResourceMapper
         $qPar = $params->get('q');
 
         $queryAll = $params->count() > 0 && !empty($qPar) ? $qPar : null;
-        //$client = new Client(['hosts' => ['sb-s1.swissbib.unibas.ch:8080']]);
-        $client = new Client();
+        $client = new Client(['hosts' => ['sb-s2.swissbib.unibas.ch:8080']]);
+        //$client = new Client();
         $getParams = array();
-        $getParams['index'] = 'swissbib';
-        $getParams['type'] = 'RDF';
+        $getParams['index'] = 'testsb';
+        $getParams['type'] = ['bibliographicResource'];
 
         if ($queryAll) {
             $getParams['body'] = array(
@@ -31,7 +31,7 @@ class ResourceMapper
                     "multi_match" => array(
                         'query' => $queryAll,
                         'fields' => array(
-                            'title', 'bibliographicCitation','isssued', 'format', 'publicationStatement'
+                            'dct:title'
                         )
                     )
                 ));

@@ -6,7 +6,7 @@
     ?>
     <?php foreach ($collecton as $key => $value): ?>
 
-    <h2><a href="<?= "https://test.swissbib.ch/Record/" . $value->getId()?>"  target="_blank    " ><?= $value->getId() ?></a></h2>
+    <h2><a href="<?= "https://www.swissbib.ch/Record/" . $value->getId()?>"  target="_blank    " ><?= $value->getId() ?></a></h2>
 		<ul class="nav nav-tabs" id="<?= "-" . $value->getId() . "-serializations" ?>">
           <li><a href="<?= "#-" . $value->getId() . "-serialMF" ?>" data-toggle="tab">RDF/XML - MF (Nicolas)</a></li>
 		  <li><a href="<?= "#-" . $value->getId() . "-rdfa" ?>" data-toggle="tab">RDFa</a></li>

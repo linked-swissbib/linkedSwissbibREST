@@ -24,6 +24,15 @@ class ResourceEntity
 
     public function populate($data)
     {
+
+        $rdfGraph = new \EasyRdf_Graph();
+        $rdfGraph->parse(json_encode($data['_source']),'jsonld');
+        $turtle = $rdfGraph->serialise('turtle');
+        $ntriples = $rdfGraph->serialise('ntriples');
+        $jsonld = $rdfGraph->serialise('jsonld');
+        $result = $rdfGraph->serialise('rdfxml');
+        $this->fullRecord = $result;
+        /*
         foreach ($data['_source'] as $key => $value) {
             if (property_exists($this,$key)) {
 
@@ -51,6 +60,7 @@ class ResourceEntity
                 $this->{$key} = is_array($value) ? $value[0] : $value;
             }
         }
+        */
         $this->id = $data['_id'];
     }
 

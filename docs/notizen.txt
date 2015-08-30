@@ -11,3 +11,16 @@ php -S 0.0.0.0:8888 -t public public/index.php
 
 3) Zugriff
  curl --cookie "XDEBUG_SESSION=19101" -s -H "Accept: application/vnd.linked-swissbib.v1+json" http://localhost:37000/resource | python -mjson.tool
+ curl  -s -H "Accept: application/vnd.linked-swissbib.v1+json" http://linked.swissbib.ch/resource | python -mjson.tool
+
+
+4) json-ld
+ http://stackoverflow.com/questions/24421234/using-the-hal-vocab-with-json-ld
+ https://groups.google.com/forum/#!topic/hal-discuss/iuo0FLFzkzA
+
+ 5) remote debugging phpstorm
+ http://www.stephenrhoades.com/?paged=2
+ -> remote debugging phpstorm
+
+ 6) apigility Beipielmodul
+ http://phpmagazin.de/artikel/apigility-tutorial-174555?page=1
