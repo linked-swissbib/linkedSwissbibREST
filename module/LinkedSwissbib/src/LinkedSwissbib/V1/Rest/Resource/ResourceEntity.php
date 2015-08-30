@@ -15,6 +15,11 @@ class ResourceEntity
     protected $issn;
     protected $id;
     protected $fullRecord;
+    protected $recordJSON_LD;
+    protected $nTriples;
+    protected $turtle;
+
+
 
 
     public function getArrayCopy()
@@ -27,9 +32,9 @@ class ResourceEntity
 
         $rdfGraph = new \EasyRdf_Graph();
         $rdfGraph->parse(json_encode($data['_source']),'jsonld');
-        $turtle = $rdfGraph->serialise('turtle');
-        $ntriples = $rdfGraph->serialise('ntriples');
-        $jsonld = $rdfGraph->serialise('jsonld');
+        $this->turtle = $rdfGraph->serialise('turtle');
+        $this->nTriples = $rdfGraph->serialise('ntriples');
+        $this->recordJSON_LD = $rdfGraph->serialise('jsonld');
         $result = $rdfGraph->serialise('rdfxml');
         $this->fullRecord = $result;
         /*
@@ -238,6 +243,30 @@ class ResourceEntity
     public function setFullRecord($fullRecord)
     {
         $this->fullRecord = $fullRecord;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getRecordJSONLD()
+    {
+        return $this->recordJSON_LD;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getNTriples()
+    {
+        return $this->nTriples;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getTurtle()
+    {
+        return $this->turtle;
     }
 
 

@@ -27,20 +27,20 @@
 
             <div class="tab-pane" id="<?= "-" . $value->getId() . "-jld" ?>">
                 <pre>
-                    <?= htmlspecialchars($this->convertRDF()->convertToJsonLD($value->getFullRecord())) ?>
+                    <?= htmlspecialchars($value->getRecordJSONLD()) ?>
                 </pre>
 
             </div>
 
             <div class="tab-pane" id="<?= "-" . $value->getId() . "-nt" ?>">
                 <pre>
-                    <?= htmlspecialchars($this->convertRDF()->convertToNTriples($value->getFullRecord())) ?>
+                    <?= htmlspecialchars($value->getNTriples()) ?>
                 </pre>
             </div>
 
             <div class="tab-pane" id="<?= "-" . $value->getId() . "-ttl" ?>">
                 <pre>
-                    <?= htmlspecialchars($this->convertRDF()->convertToTurtle($value->getFullRecord())) ?>
+                    <?= htmlspecialchars($value->getTurtle()) ?>
                 </pre>
             </div>
         </div>
