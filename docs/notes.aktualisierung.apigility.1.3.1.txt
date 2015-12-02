@@ -1,0 +1,379 @@
+swissbib@ub-sbhp02:/usr/local/vufind/linkedSwissbibREST$ composer update
+Loading composer repositories with package information
+Updating dependencies (including require-dev)
+  - Removing zfcampus/zf-apigility-welcome (1.0.1)
+  - Removing guzzle/common (v3.9.2)
+  - Removing guzzle/stream (v3.9.2)
+  - Removing guzzle/parser (v3.9.2)
+  - Removing zendframework/zendxml (1.0.0)
+  - Installing zendframework/zendxml (1.0.1)
+    Downloading: 100%
+
+  - Installing zendframework/zend-stdlib (2.5.2)
+    Downloading: 100%
+
+  - Installing zendframework/zend-eventmanager (2.5.2)
+    Loading from cache
+
+  - Installing zendframework/zend-code (2.5.3)
+    Downloading: 100%
+
+  - Installing zendframework/zend-server (2.5.1)
+    Loading from cache
+
+  - Installing zendframework/zend-math (2.5.1)
+    Loading from cache
+
+  - Installing zendframework/zend-validator (2.5.3)
+    Loading from cache
+
+  - Installing zendframework/zend-escaper (2.5.1)
+    Loading from cache
+
+  - Installing zendframework/zend-uri (2.5.1)
+    Loading from cache
+
+  - Installing zendframework/zend-loader (2.5.1)
+    Loading from cache
+
+  - Installing zendframework/zend-http (2.5.3)
+    Downloading: 100%
+
+  - Installing zendframework/zend-xmlrpc (2.5.1)
+    Loading from cache
+
+  - Installing zendframework/zend-view (2.5.2)
+    Downloading: 100%
+
+  - Installing zendframework/zend-json (2.5.2)
+    Downloading: 100%
+
+  - Installing zendframework/zend-version (2.5.1)
+    Loading from cache
+
+  - Installing zendframework/zend-servicemanager (2.5.1)
+    Loading from cache
+
+  - Installing zendframework/zend-text (2.5.1)
+    Loading from cache
+
+  - Installing zendframework/zend-filter (2.5.1)
+    Loading from cache
+
+  - Installing zendframework/zend-inputfilter (2.5.5)
+    Loading from cache
+
+  - Installing zendframework/zend-form (2.5.3)
+    Downloading: 100%
+
+  - Installing zendframework/zend-mvc (2.5.3)
+    Downloading: 100%
+
+  - Installing zendframework/zend-dom (2.5.1)
+    Loading from cache
+
+  - Installing zendframework/zend-console (2.5.1)
+    Loading from cache
+
+  - Installing sebastian/version (1.0.6)
+    Loading from cache
+
+  - Installing sebastian/global-state (1.1.1)
+    Loading from cache
+
+  - Installing sebastian/recursion-context (1.0.1)
+    Loading from cache
+
+  - Installing sebastian/exporter (1.2.1)
+    Loading from cache
+
+  - Installing sebastian/environment (1.3.3)
+    Downloading: 100%
+
+  - Installing sebastian/diff (1.3.0)
+    Loading from cache
+
+  - Installing sebastian/comparator (1.2.0)
+    Loading from cache
+
+  - Installing symfony/yaml (v3.0.0)
+    Loading from cache
+
+  - Installing doctrine/instantiator (1.0.5)
+    Loading from cache
+
+  - Installing phpdocumentor/reflection-docblock (2.0.4)
+    Loading from cache
+
+  - Installing phpspec/prophecy (v1.5.0)
+    Loading from cache
+
+  - Installing phpunit/php-text-template (1.2.1)
+    Loading from cache
+
+  - Installing phpunit/phpunit-mock-objects (2.3.8)
+    Loading from cache
+
+  - Installing phpunit/php-timer (1.0.7)
+    Loading from cache
+
+  - Installing phpunit/php-token-stream (1.4.8)
+    Loading from cache
+
+  - Installing phpunit/php-file-iterator (1.4.1)
+    Loading from cache
+
+  - Installing phpunit/php-code-coverage (2.2.4)
+    Loading from cache
+
+  - Installing phpunit/phpunit (4.8.19)
+    Loading from cache
+
+  - Installing zendframework/zend-test (2.5.1)
+    Loading from cache
+
+  - Installing zendframework/zend-tag (2.5.1)
+    Loading from cache
+
+  - Installing zendframework/zend-soap (2.5.1)
+    Loading from cache
+
+  - Installing zendframework/zend-session (2.5.2)
+    Loading from cache
+
+  - Installing zendframework/zend-serializer (2.5.1)
+    Loading from cache
+
+  - Installing zendframework/zend-progressbar (2.5.1)
+    Loading from cache
+
+  - Installing zendframework/zend-permissions-rbac (2.5.1)
+    Loading from cache
+
+  - Installing zendframework/zend-permissions-acl (2.5.1)
+    Loading from cache
+
+  - Installing zendframework/zend-paginator (2.5.1)
+    Loading from cache
+
+  - Installing zendframework/zend-navigation (2.5.1)
+    Loading from cache
+
+  - Installing zendframework/zend-modulemanager (2.5.3)
+    Downloading: 100%
+
+  - Installing zendframework/zend-mime (2.5.1)
+    Loading from cache
+
+  - Installing zendframework/zend-memory (2.5.1)
+    Loading from cache
+
+  - Installing zendframework/zend-crypt (2.5.2)
+    Downloading: 100%
+
+  - Installing zendframework/zend-mail (2.5.2)
+    Downloading: 100%
+
+  - Installing zendframework/zend-log (2.5.2)
+    Downloading: 100%
+
+  - Installing zendframework/zend-i18n-resources (2.5.2)
+    Downloading: 100%
+
+  - Installing zendframework/zend-i18n (2.5.1)
+    Loading from cache
+
+  - Installing zendframework/zend-file (2.5.1)
+    Loading from cache
+
+  - Installing zendframework/zend-feed (2.5.2)
+    Downloading: 100%
+
+  - Installing zendframework/zend-di (2.5.1)
+    Loading from cache
+
+  - Installing zendframework/zend-debug (2.5.1)
+    Loading from cache
+
+  - Installing zendframework/zend-db (2.5.2)
+    Downloading: 100%
+
+  - Installing zendframework/zend-config (2.5.1)
+    Loading from cache
+
+  - Installing zendframework/zend-captcha (2.5.2)
+    Downloading: 100%
+
+  - Installing zendframework/zend-cache (2.5.3)
+    Downloading: 100%
+
+  - Installing zendframework/zend-barcode (2.5.2)
+    Downloading: 100%
+
+  - Installing zendframework/zend-authentication (2.5.2)
+    Downloading: 100%
+
+  - Removing zendframework/zendframework (2.3.5)
+  - Installing zendframework/zendframework (2.5.2)
+    Downloading: 100%
+
+  - Removing zfcampus/zf-api-problem (1.0.1)
+  - Installing zfcampus/zf-api-problem (1.1.0)
+    Downloading: 100%
+
+  - Removing zfcampus/zf-content-negotiation (1.0.3)
+  - Installing zfcampus/zf-content-negotiation (1.1.1)
+    Downloading: 100%
+
+  - Removing zfcampus/zf-configuration (1.0.1)
+  - Installing zfcampus/zf-configuration (1.1.0)
+    Downloading: 100%
+
+  - Removing zfcampus/zf-apigility-provider (1.0.1)
+  - Installing zfcampus/zf-apigility-provider (1.1.0)
+    Downloading: 100%
+
+  - Removing zfcampus/zf-apigility-documentation (1.0.3)
+  - Installing zfcampus/zf-apigility-documentation (1.1.0)
+    Downloading: 100%
+
+  - Removing zfcampus/zf-development-mode (2.0.3)
+  - Installing zfcampus/zf-development-mode (2.1.1)
+    Downloading: 100%
+
+  - Removing symfony/event-dispatcher (v2.6.4)
+  - Installing symfony/event-dispatcher (v2.8.0)
+    Downloading: 100%
+
+  - Removing guzzle/http (v3.9.2)
+  - Installing guzzle/guzzle (v3.9.3)
+    Downloading: 100%
+
+  - Removing pimple/pimple (v2.1.1)
+  - Installing pimple/pimple (v3.0.2)
+    Downloading: 100%
+
+  - Removing monolog/monolog (1.12.0)
+  - Installing monolog/monolog (1.17.2)
+    Downloading: 100%
+
+  - Removing elasticsearch/elasticsearch (v1.3.2)
+  - Installing elasticsearch/elasticsearch (v1.4.1)
+    Downloading: 100%
+
+  - Removing athletic/athletic (v0.1.8)
+  - Installing athletic/athletic (v0.1.0)
+    Downloading: 100%
+
+  - Removing easyrdf/easyrdf (0.9.0)
+  - Installing easyrdf/easyrdf (0.9.1)
+    Loading from cache
+
+  - Removing zfcampus/zf-versioning (1.0.1)
+  - Installing zfcampus/zf-versioning (1.1.0)
+    Downloading: 100%
+
+  - Removing zfcampus/zf-rpc (1.0.1)
+  - Installing zfcampus/zf-rpc (1.2.0)
+    Downloading: 100%
+
+  - Removing bshaffer/oauth2-server-php (v1.6)
+  - Installing bshaffer/oauth2-server-php (v1.8.0)
+    Downloading: 100%
+
+  - Removing zfcampus/zf-oauth2 (1.0.2)
+  - Installing zfcampus/zf-oauth2 (1.3.1)
+    Downloading: 100%
+
+  - Removing zfcampus/zf-mvc-auth (1.0.2)
+  - Installing zfcampus/zf-mvc-auth (1.3.1)
+    Downloading: 100%
+
+  - Removing zfcampus/zf-hal (1.0.4)
+  - Installing zfcampus/zf-hal (1.2.1)
+    Downloading: 100%
+
+  - Removing zfcampus/zf-rest (1.0.3)
+  - Installing zfcampus/zf-rest (1.2.0)
+    Downloading: 100%
+
+  - Removing zfcampus/zf-content-validation (1.0.2)
+  - Installing zfcampus/zf-content-validation (1.2.0)
+    Downloading: 100%
+
+  - Removing symfony/process (v2.6.4)
+  - Installing symfony/process (v2.8.0)
+    Downloading: 100%
+
+  - Removing kriswallsmith/assetic (v1.1.3)
+  - Installing kriswallsmith/assetic (v1.2.1)
+    Downloading: 100%
+
+  - Removing rwoverdijk/assetmanager (1.4.2)
+  - Installing rwoverdijk/assetmanager (1.4.4)
+    Downloading: 100%
+
+  - Installing zfcampus/zf-apigility-admin-ui (1.2.1)
+    Downloading: 100%
+
+  - Removing zfcampus/zf-apigility (1.0.2)
+  - Installing zfcampus/zf-apigility (1.2.1)
+    Downloading: 100%
+
+  - Removing zfcampus/zf-apigility-admin (1.0.4)
+  - Installing zfcampus/zf-apigility-admin (1.3.2)
+    Downloading: 100%
+
+  - Removing zfcampus/zf-console (1.0.3)
+  - Installing zfcampus/zf-console (1.2.0)
+    Downloading: 100%
+
+  - Removing seld/jsonlint (1.3.1)
+  - Installing seld/jsonlint (1.4.0)
+    Downloading: 100%
+
+  - Removing justinrainbow/json-schema (1.3.7)
+  - Installing justinrainbow/json-schema (1.5.0)
+    Downloading: 100%
+
+  - Removing zfcampus/zf-deploy (1.0.3)
+  - Installing zfcampus/zf-deploy (1.1.0)
+    Downloading: 100%
+
+  - Removing zendframework/zenddiagnostics (v1.0.4)
+  - Installing zendframework/zenddiagnostics (v1.0.8)
+    Downloading: 100%
+
+  - Updating zendframework/zftool dev-master (8bab848 => 840c3ee)
+    Checking out 840c3eecd58454396983d84d1da293813af484af
+
+  - Updating zendframework/zend-developer-tools dev-master (55432ef => b2509f8)
+    Checking out b2509f8e62b018fc9d70ad126431d01ba0de6eed
+
+zendframework/zend-code suggests installing doctrine/common (Doctrine\Common >=2.1 for annotation features)
+zendframework/zend-math suggests installing ext-gmp (If using the gmp functionality)
+zendframework/zend-math suggests installing ircmaxell/random-lib (Fallback random byte generator for Zend\Math\Rand if OpenSSL/Mcrypt extensions are unavailable)
+zendframework/zend-servicemanager suggests installing ocramius/proxy-manager (ProxyManager 0.5.* to handle lazy initialization of services)
+zendframework/zend-form suggests installing zendframework/zendservice-recaptcha (ZendService\ReCaptcha component)
+sebastian/global-state suggests installing ext-uopz (*)
+phpdocumentor/reflection-docblock suggests installing dflydev/markdown (~1.0)
+phpdocumentor/reflection-docblock suggests installing erusev/parsedown (~1.0)
+phpunit/php-code-coverage suggests installing ext-xdebug (>=2.2.1)
+phpunit/phpunit suggests installing phpunit/php-invoker (~1.1)
+zendframework/zend-crypt suggests installing ext-mcrypt (Required for most features of Zend\Crypt)
+zendframework/zend-log suggests installing ext-mongo (mongodb extetension to use MongoDB writer)
+zendframework/zend-i18n suggests installing zendframework/zend-resources (Translation resources)
+zendframework/zend-debug suggests installing ext/xdebug (XDebug, for better backtrace output)
+zendframework/zend-captcha suggests installing zendframework/zendservice-recaptcha (ZendService\ReCaptcha component)
+zendframework/zend-cache suggests installing ext-apcu (APCU, to use the APC storage adapter)
+zendframework/zend-cache suggests installing ext-memcache (Memcache >= 2.0.0 to use the Memcache storage adapter)
+zendframework/zend-cache suggests installing ext-memcached (Memcached >= 1.0.0 to use the Memcached storage adapter)
+zendframework/zend-cache suggests installing ext-mongo (Mongo, to use MongoDb storage adapter)
+zendframework/zend-cache suggests installing ext-redis (Redis, to use Redis storage adapter)
+zendframework/zend-cache suggests installing ext-wincache (WinCache, to use the WinCache storage adapter)
+zendframework/zend-cache suggests installing ext-xcache (XCache, to use the XCache storage adapter)
+zendframework/zend-cache suggests installing mongofill/mongofill (Alternative to ext-mongo - a pure PHP implementation designed as a drop in replacement)
+zendframework/zend-barcode suggests installing zendframework/zendpdf (ZendPdf component)
+zendframework/zend-authentication suggests installing zendframework/zend-ldap (Zend\Ldap component)
+Writing lock file
+Generating autoload files
